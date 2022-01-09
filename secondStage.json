@@ -1,0 +1,30 @@
+{
+  "0":{
+    "id" : "driver-1",
+    "name" : "Erlan"
+  },
+  "1":{
+    "id" : "driver-2",
+    "name" : "Azamat"
+  },
+  "2":{
+    "id" : "driver-3",
+    "name" : "Kuttubek"
+  },
+  "3":{
+    "id" : "driver-4",
+    "name" : "Arlen"
+  },
+  "4":{
+    "id" : "driver-5",
+    "name" : "Barsbek"
+  },
+  "5":{
+    "id" : "driver-6",
+    "name" : "Ermek"
+  },
+  "6":{
+    "id" : "driver-7",
+    "name" : "Bektur"
+  }
+}
