@@ -17,6 +17,7 @@ public class ServiceImpl implements Service{
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
     List<AutoPark> list1 = new ArrayList<AutoPark>();
     List<DriverInfo> list2 = new ArrayList<DriverInfo>();
     private int id;
@@ -33,7 +34,7 @@ public class ServiceImpl implements Service{
 
         //if already on the road
         if(list1.get(id).getState().equals("ROUTE")){
-            System.err.println("We can't change the driver, because he is already on the road!");
+            System.out.println(ANSI_RED+"We can't change the driver, because he is already on the road!"+ANSI_RESET);
         }
 
         //assigning new driver
@@ -66,7 +67,7 @@ public class ServiceImpl implements Service{
             }
         }
         else if(list1.get(id).getState().equals("REPAIR")){
-            System.err.println("We can't assign or change a driver");
+            System.out.println(ANSI_RED+"We can't assign or change a driver"+ANSI_RESET);
         }
     }
 
@@ -76,7 +77,7 @@ public class ServiceImpl implements Service{
         int k = random.nextInt(3-1)+1;
         //if already on the road
         if (list1.get(id).getState().equals("ROUTE")){
-            System.err.println("The truck is already on the road");
+            System.out.println(ANSI_RED+"The truck is already on the road"+ANSI_RESET);
         }
         //if under repair and need to change state
         else if(list1.get(id).getState().equals("REPAIR")&&!list1.get(id).getDriver().equals("")){
@@ -99,15 +100,13 @@ public class ServiceImpl implements Service{
         // can't drive without a driver
         else if(list1.get(id).getState().equals("BASE")&&list1.get(id).getDriver().equals(""))
         {
-            System.err.println("You can't start driving without a driver");
+            System.out.println(ANSI_RED+"You can't start driving without a driver"+ANSI_RESET);
         }
         //making a truck driving
         else if(!list1.get(id).getDriver().equals("")){
             list1.get(id).setState("ROUTE");
             System.out.println(ANSI_PURPLE+"Successfully started driving!"+ANSI_RESET);
         }
-        //if already on the road
-
 
     }
 
@@ -124,7 +123,7 @@ public class ServiceImpl implements Service{
                 System.out.println(ANSI_PURPLE + "Successfully changed from BASE to REPAIR" + ANSI_PURPLE);
             }
             //if already under repairment
-            case "REPAIR" -> System.err.println("This truck is already under repairment!");
+            case "REPAIR" -> System.out.println(ANSI_RED+"This truck is already under repairment!"+ANSI_RESET);
         }
     }
 
