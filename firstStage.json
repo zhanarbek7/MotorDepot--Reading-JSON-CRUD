@@ -1,0 +1,44 @@
+{
+  "0":{
+    "id" : "1",
+    "name" : "Renault Magnum",
+    "driver" : "",
+    "state" : "BASE"
+  },
+  "1": {
+    "id" : "2",
+    "name" : "Volvo",
+    "driver" : "",
+    "state" : "BASE"
+  },
+  "2": {
+    "id" : "3",
+    "name" : "CHEVROLET",
+    "driver" : "",
+    "state" : "BASE"
+  },
+  "3": {
+    "id" : "4",
+    "name" : "FORD",
+    "driver" : "",
+    "state" : "BASE"
+  },
+  "4": {
+    "id" : "5",
+    "name" : "ISUZU",
+    "driver" : "",
+    "state" : "BASE"
+  },
+  "5": {
+    "id" : "6",
+    "name" : "LINCOLN",
+    "driver" : "",
+    "state" : "BASE"
+  },
+  "6": {
+    "id" : "7",
+    "name" : "KIA",
+    "driver" : "",
+    "state" : "BASE"
+  }
+}
